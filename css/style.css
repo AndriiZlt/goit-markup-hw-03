@@ -158,8 +158,10 @@ img- {
 
 /* Hero */
 .hero {
+  height: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: var(--hero-background);
   text-align: center;
@@ -167,24 +169,17 @@ img- {
 }
 
 .hero h1 {
-  position: relative;
-  top: 40%;
   background-color: var(--hero-background);
   color: var(--h1-color);
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
 }
 
 /* Кнопка на Studio */
 
 .btn-studio {
-  position: relative;
-  top: 50%;
-  margin-top: -0.625em;
-  margin-top: 0px;
   width: 170px;
   height: 51px;
   border-radius: 4px;
