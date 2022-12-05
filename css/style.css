@@ -377,6 +377,7 @@ img- {
   width: 264px;
   display: inline-block;
   background: #ffffff;
+  text-align: center;
 }
 
 .employee + .employee {
