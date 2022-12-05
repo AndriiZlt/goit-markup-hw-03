@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"); */
 
 :root {
   /* Мне удобнее иметь весь список цветов чтобы при необходимости менять конкретный цвет в конкретном месте */
@@ -22,6 +22,7 @@
   --hero-background: #2e2f42;
   --headings-background: #e5e5e5;
   --our-team-background: #f4f4fd;
+  --result-background: #f4f4fd;
   --footer-background: #2e2f42;
   --btn-portfol-background: #f4f4fd;
   --btn-portfol-background-focus: #e7e9fc;
@@ -30,30 +31,56 @@
   --btn-portfol-active-text: #ffffff;
 }
 
+.list {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
   color: var(--article-text);
   background-color: var(--page-background);
   font-family: "Roboto", "Raleway", serif;
 }
+
+h1,
+h2,
+h3,
+p,
+img- {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  outline: 1px solid red;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1128px;
+}
+
 /* Header */
 .page-header {
+  vertical-align: middle;
   color: var(--page-header-font);
-  font-weight: 700;
+  height: 72px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 2.2em;
   background-color: var(--header-background);
 }
 
-.list {
-  list-style: none;
+.header {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
 }
 
 .logo {
   color: var(--logo-color-one);
   font-family: "Raleway";
-  font-weight: 700;
+  font-weight: 900;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.14;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -70,8 +97,21 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* site nav  */
+.site-nav {
+  margin-left: 77px;
+  font-weight: 400;
+  display: flex;
+  letter-spacing: 0.2em;
+}
+
+.site-nav .item + .item {
+  margin-left: 40px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: var(--header-font);
   font-weight: 500;
   font-size: 16px;
@@ -89,12 +129,28 @@ body {
   color: var(--accent-font-two);
 }
 
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+  letter-spacing: 0.2em;
+  text-align: left;
+}
+
 .auth-nav .link {
+  display: block;
+  margin-left: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: var(--accent-font-one);
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
   letter-spacing: 0.02em;
+}
+
+.auth-nav .link: :first-child {
+  margin-left: 0px;
 }
 
 .auth-nav .link:hover,
@@ -104,20 +160,36 @@ body {
 
 /* Hero */
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--hero-background);
+  text-align: center;
+  margin: auto;
 }
 
 .hero h1 {
+  position: relative;
+  top: 40%;
+  background-color: var(--hero-background);
   color: var(--h1-color);
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 /* Кнопка на Studio */
 
 .btn-studio {
+  position: relative;
+  top: 50%;
+  margin-top: -0.625em;
+  margin-top: 0px;
+  width: 170px;
+  height: 51px;
+  border-radius: 4px;
   font-family: inherit;
   font-size: 16px;
   line-height: 1.1875;
@@ -126,8 +198,6 @@ body {
   border: none;
   font-weight: 700;
   cursor: pointer;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
 }
 
@@ -136,6 +206,115 @@ body {
 }
 
 /* Кнопки на Portfolio */
+
+/* Features + Works + Examples*/
+.section {
+  background-color: var(--section-background);
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+.section.portfolio {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.section.portfolio h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.section.portfolio p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 72px;
+  padding-top: 0px;
+  /* width: 322px;
+  height: 40px; */
+  color: var(--h2-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.section h2 {
+  margin-top: 0px;
+  font-size: 36px;
+  line-height: 1.11;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.section h3 {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  color: var(--h3-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.section p {
+  margin-top: 0px;
+  margin-botom: 0px;
+  color: var(--article-text);
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.section-two {
+  padding-bottom: 120px;
+}
+
+.results {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+
+.result:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.result {
+  width: 359px;
+  margin-right: 24px;
+  margin-bottom: 48px;
+  border-bottom: 2px solid var(--result-background);
+}
+
+.result h3 {
+  padding-top: 32px;
+  padding-left: 16px;
+}
+
+.result p {
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 32px;
+}
+
+.filter-btn {
+  justify-content: center;
+  padding-top: 96px;
+  padding-bottom: 72px;
+  text-align: center;
+  margin: auto;
+  width: 586px;
+}
+
 .btn-portfolio {
   font-family: inherit;
   background-color: var(--btn-portfol-background);
@@ -146,6 +325,12 @@ body {
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.04em;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+.btn-filter + .btn-filter {
+  margin-left: 20px;
 }
 
 .btn-portfolio:hover,
@@ -155,67 +340,61 @@ body {
   color: var(--btn-portfol-active-text);
 }
 
-/* Features + Works + Examples*/
-.section {
-  background-color: var(--section-background);
+.portfolio {
+  padding-top: 0px;
 }
 
-.section-portfolio .section-title {
-  visibility: hidden;
-  letter-spacing: 0.02em;
+.example {
+  width: 360px;
 }
 
-.section-portfolio h3 {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+.example + .example {
+  margin-left: 24px;
 }
 
-.section-portfolio p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+.centered {
+  text-align: center;
 }
 
-.section-title {
-  color: var(--h2-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
+.features {
+  display: flex;
+}
+.feature {
+  width: 264px;
 }
 
-.section h2 {
-  font-size: 36px;
-  line-height: 1.11;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.section h3 {
-  color: var(--h3-color);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-
-.section p {
-  color: var(--article-text);
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+.feature + .feature {
+  margin-left: 24px;
 }
 
 .our-team li {
   background-color: var(--page-background);
 }
 
+.employees {
+  display: flex;
+}
+
+.employee {
+  width: 264px;
+  display: inline-block;
+  background: #ffffff;
+}
+
+.employee + .employee {
+  margin-left: 24px;
+}
+
+.emp-photo {
+  margin-bottom: 32px;
+}
+
+.employee p {
+  margin-bottom: 32px;
+}
+
 .visuallyhidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -239,12 +418,18 @@ body {
 /* Футер */
 
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: var(--footer-background);
   color: var(--footer-text);
-  /* font-weight: 400; */
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.footer p {
+  margin-top: 16px;
+  width: 264px;
 }
 
 .studio-footer {
